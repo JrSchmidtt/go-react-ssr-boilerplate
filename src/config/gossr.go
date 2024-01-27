@@ -8,8 +8,8 @@ import (
 var SsrConfig = gossr.Config{
 	AppEnv:             os.Getenv("APP_ENV"),
 	AssetRoute:         "/assets",
-	FrontendDir:        "./src/resources",
-	GeneratedTypesPath: "./src/resources/generated.d.ts",
+	FrontendDir:        "./src/views",
+	GeneratedTypesPath: "./src/views/generated.d.ts",
 	PropsStructsPath:   "./src/models/props.go",
 }
 
