@@ -3,6 +3,7 @@ import { IndexPage } from "./generated";
 import GoLogo from "../../public/go.png";
 import ReactLogo from "../../public/react.png";
 import Counter from "./components/Counter";
+import "./Home.css";
 
 function Home({ number }: IndexPage) {
   const [count, setCount] = useState(number);
