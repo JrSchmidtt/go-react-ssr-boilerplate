@@ -2,11 +2,15 @@ package server
 
 import (
 	"github.com/JrSchmidtt/go-react-ssr-boilerplate/src/routes"
+	"github.com/JrSchmidtt/go-react-ssr-boilerplate/src/utils"
 	"github.com/gin-gonic/gin"
-
 )
 
 func Run() (error) {
+	node_modules := utils.CheckIfExistNodeModules()
+	if !node_modules {
+		utils.NpmInstall()	
+	}
 	router := gin.Default()
 	router.StaticFile("favicon.ico", "./public/favicon.ico")
 	router.Static("/assets", "./public")
